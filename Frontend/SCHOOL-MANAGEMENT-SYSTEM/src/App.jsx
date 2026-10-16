@@ -265,11 +265,16 @@ function AppContent() {
   // HOME → LOGIN
   // =====================================================
 
-  const handleOpenLogin = (targetPage = "Dashboard") => {
-    setLoginTargetPage(targetPage);
-    setShowHome(false);
-    navigate("/login");
-  };
+const handleOpenLogin = (targetPage) => {
+  const page =
+    typeof targetPage === "string"
+      ? targetPage
+      : "Dashboard";
+
+  setLoginTargetPage(page);
+  setShowHome(false);
+  navigate("/login");
+};
 
   // =====================================================
   // LOGIN SUCCESS
