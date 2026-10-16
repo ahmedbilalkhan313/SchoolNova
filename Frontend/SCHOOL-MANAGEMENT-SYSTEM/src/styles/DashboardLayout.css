@@ -1,0 +1,106 @@
+/* =========================================================
+   SCHOOLNOVA APP LAYOUT
+========================================================= */
+
+.app-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(0, 112, 255, 0.08),
+      transparent 28%
+    ),
+    #020817;
+
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   MAIN AREA
+========================================================= */
+
+.main-area {
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background:
+    linear-gradient(
+      135deg,
+      #020817 0%,
+      #03132b 55%,
+      #020a18 100%
+    );
+
+  transition: margin-left 0.25s ease;
+}
+
+/* =========================================================
+   PAGE CONTENT
+========================================================= */
+
+.page-content {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+
+  padding: 0;
+
+  overflow-x: hidden;
+}
+
+.page-content-inner {
+  width: 100%;
+  min-height: 100%;
+}
+
+/* =========================================================
+   MOBILE SIDEBAR OVERLAY
+========================================================= */
+
+.sidebar-overlay {
+  display: none;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .main-area {
+    width: 100%;
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .page-content {
+    width: 100%;
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+
+    display: block;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: 90;
+
+    backdrop-filter: blur(2px);
+  }
+
+}

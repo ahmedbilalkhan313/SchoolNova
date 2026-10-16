@@ -1,0 +1,1068 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap");
+
+/* =====================================================
+   TEACHERS PAGE
+===================================================== */
+
+.teachers-page {
+  min-height: 100%;
+  padding: 30px;
+  color: #e8eefc;
+  font-family: "Inter", sans-serif;
+
+  background:
+    radial-gradient(
+      circle at 20% 0%,
+      rgba(37, 99, 235, 0.08),
+      transparent 28%
+    ),
+    #071936;
+}
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.page-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 28px;
+}
+
+.heading-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-kicker {
+  display: inline-block;
+  margin-bottom: 7px;
+
+  color: #60a5fa;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.page-heading h1 {
+  margin: 0;
+
+  color: #f8fbff;
+  font-family: "Poppins", sans-serif;
+  font-size: 31px;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+}
+
+.page-heading p {
+  margin: 7px 0 0;
+
+  color: #8fa5c5;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   PRIMARY BUTTON
+===================================================== */
+
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 44px;
+  padding: 0 18px;
+
+  border: 1px solid rgba(96, 165, 250, 0.65);
+  border-radius: 11px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #4f46e5
+    );
+
+  box-shadow:
+    0 10px 28px rgba(37, 99, 235, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+
+  border-color: #93c5fd;
+
+  box-shadow:
+    0 14px 32px rgba(37, 99, 235, 0.30),
+    0 0 18px rgba(37, 99, 235, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.primary-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =====================================================
+   SUMMARY CARDS
+===================================================== */
+
+.teacher-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+
+  margin-bottom: 22px;
+}
+
+.summary-card {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  min-height: 92px;
+  padding: 18px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(96, 165, 250, 0.32);
+  border-radius: 17px;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      currentColor,
+      transparent 48%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(20, 50, 92, 0.96),
+      rgba(7, 27, 57, 0.98)
+    );
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.summary-card::after {
+  content: "";
+
+  position: absolute;
+  width: 100px;
+  height: 100px;
+
+  right: -40px;
+  bottom: -55px;
+
+  border-radius: 50%;
+
+  background: currentColor;
+  opacity: 0.055;
+
+  filter: blur(2px);
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(147, 197, 253, 0.58);
+
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.24),
+    0 0 22px rgba(37, 99, 235, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.summary-icon {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.summary-card > div:last-child {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.summary-card span {
+  color: #8fa5c5;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.summary-card strong {
+  color: #f7faff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   SUMMARY COLORS
+===================================================== */
+
+.blue-summary {
+  color: #60a5fa;
+}
+
+.blue-summary .summary-icon {
+  color: #60a5fa;
+  background: rgba(37, 99, 235, 0.16);
+  box-shadow: 0 0 18px rgba(37, 99, 235, 0.08);
+}
+
+.green-summary {
+  color: #4ade80;
+}
+
+.green-summary .summary-icon {
+  color: #4ade80;
+  background: rgba(22, 163, 74, 0.15);
+  box-shadow: 0 0 18px rgba(34, 197, 94, 0.08);
+}
+
+.purple-summary {
+  color: #a78bfa;
+}
+
+.purple-summary .summary-icon {
+  color: #a78bfa;
+  background: rgba(124, 58, 237, 0.16);
+  box-shadow: 0 0 18px rgba(139, 92, 246, 0.08);
+}
+
+.orange-summary {
+  color: #fb923c;
+}
+
+.orange-summary .summary-icon {
+  color: #fb923c;
+  background: rgba(234, 88, 12, 0.16);
+  box-shadow: 0 0 18px rgba(249, 115, 22, 0.08);
+}
+
+
+/* =====================================================
+   TEACHERS CARD
+===================================================== */
+
+.teachers-card {
+  overflow: hidden;
+
+  border: 1px solid rgba(96, 165, 250, 0.30);
+  border-radius: 18px;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(37, 99, 235, 0.08),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(13, 35, 67, 0.98),
+      rgba(7, 25, 51, 0.99)
+    );
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.20),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.teachers-card:hover {
+  border-color: rgba(96, 165, 250, 0.48);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.24),
+    0 0 25px rgba(37, 99, 235, 0.04);
+}
+
+
+/* =====================================================
+   TABLE TOP
+===================================================== */
+
+.table-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+  padding: 22px 24px;
+
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.table-kicker {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #60a5fa;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.table-top h2 {
+  margin: 0;
+
+  color: #f4f7ff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.table-top p {
+  margin: 4px 0 0;
+
+  color: #748baa;
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   SEARCH BOX
+===================================================== */
+
+.search-box {
+  display: flex;
+  align-items: center;
+
+  width: 245px;
+  height: 42px;
+
+  padding: 0 13px;
+  gap: 9px;
+
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  border-radius: 10px;
+
+  color: #7190b6;
+
+  background: rgba(5, 22, 45, 0.80);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.search-box:hover {
+  border-color: rgba(96, 165, 250, 0.45);
+}
+
+.search-box:focus-within {
+  border-color: rgba(96, 165, 250, 0.72);
+
+  background: #0a2344;
+
+  box-shadow:
+    0 0 0 3px rgba(59, 130, 246, 0.09),
+    0 0 18px rgba(37, 99, 235, 0.06);
+}
+
+.search-box input {
+  width: 100%;
+  min-width: 0;
+
+  border: none;
+  outline: none;
+
+  color: #e7efff;
+  background: transparent;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+}
+
+.search-box input::placeholder {
+  color: #617896;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-wrapper table {
+  width: 100%;
+  min-width: 900px;
+
+  border-collapse: collapse;
+}
+
+.table-wrapper thead {
+  background: rgba(4, 17, 36, 0.58);
+}
+
+.table-wrapper th {
+  padding: 14px 20px;
+
+  border-bottom: 1px solid rgba(148, 163, 184, 0.13);
+
+  color: #6f87a7;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.table-wrapper td {
+  padding: 15px 20px;
+
+  border-bottom: 1px solid rgba(148, 163, 184, 0.09);
+
+  color: #b9c8dd;
+
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.table-wrapper tbody tr {
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.table-wrapper tbody tr:hover {
+  background: rgba(37, 99, 235, 0.055);
+}
+
+.table-wrapper tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =====================================================
+   TEACHER NAME
+===================================================== */
+
+.teacher-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.teacher-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  border-radius: 10px;
+
+  color: #a78bfa;
+  background: rgba(124, 58, 237, 0.12);
+
+  box-shadow:
+    0 0 14px rgba(124, 58, 237, 0.07);
+}
+
+.teacher-name-cell > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.teacher-name-cell strong {
+  color: #eaf1ff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.teacher-name-cell span {
+  color: #647d9e;
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   EMAIL
+===================================================== */
+
+.email-cell {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #8fa5c5;
+}
+
+.email-cell svg {
+  flex: 0 0 auto;
+  color: #60a5fa;
+}
+
+.email-cell span {
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   SUBJECT
+===================================================== */
+
+.subject-cell {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #aebfd7;
+}
+
+.subject-cell svg {
+  color: #a78bfa;
+}
+
+
+/* =====================================================
+   CLASS BADGE
+===================================================== */
+
+.class-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 9px;
+
+  border: 1px solid rgba(96, 165, 250, 0.22);
+  border-radius: 7px;
+
+  color: #91a9c7;
+  background: rgba(96, 165, 250, 0.055);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.class-badge svg {
+  color: #60a5fa;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 9px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.status.active {
+  border: 1px solid rgba(74, 222, 128, 0.24);
+
+  color: #86efac;
+  background: rgba(22, 163, 74, 0.10);
+}
+
+.status.active .status-dot {
+  background: #4ade80;
+
+  box-shadow:
+    0 0 8px rgba(74, 222, 128, 0.75);
+}
+
+.status.inactive {
+  border: 1px solid rgba(248, 113, 113, 0.22);
+
+  color: #fca5a5;
+  background: rgba(220, 38, 38, 0.09);
+}
+
+.status.inactive .status-dot {
+  background: #f87171;
+
+  box-shadow:
+    0 0 7px rgba(248, 113, 113, 0.55);
+}
+
+
+/* =====================================================
+   DELETE BUTTON
+===================================================== */
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid rgba(248, 113, 113, 0.20);
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.icon-btn.delete {
+  color: #f87171;
+  background: rgba(220, 38, 38, 0.08);
+}
+
+.icon-btn.delete:hover {
+  transform: translateY(-1px);
+
+  border-color: rgba(248, 113, 113, 0.45);
+
+  background: rgba(220, 38, 38, 0.15);
+
+  box-shadow:
+    0 0 14px rgba(248, 113, 113, 0.08);
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.empty-state {
+  padding: 55px 20px !important;
+  text-align: center !important;
+}
+
+.empty-state .empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+
+  margin: 0 auto 12px;
+
+  border: 1px solid rgba(96, 165, 250, 0.28);
+  border-radius: 14px;
+
+  color: #60a5fa;
+  background: rgba(37, 99, 235, 0.09);
+}
+
+.empty-state strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #dce7f8;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.empty-state span {
+  color: #667e9d;
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   MODAL OVERLAY
+===================================================== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(2, 10, 23, 0.80);
+
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+
+  animation: modalFadeIn 0.2s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =====================================================
+   TEACHER MODAL
+===================================================== */
+
+.teacher-modal {
+  width: min(560px, 100%);
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  border: 1px solid rgba(96, 165, 250, 0.34);
+  border-radius: 20px;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(37, 99, 235, 0.10),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      #0d2749,
+      #071b35
+    );
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.48),
+    0 0 35px rgba(37, 99, 235, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  animation: modalSlideUp 0.25s ease;
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =====================================================
+   MODAL HEADER
+===================================================== */
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+  padding: 24px 25px 20px;
+
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.modal-kicker {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #60a5fa;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+.modal-header h2 {
+  margin: 0;
+
+  color: #f4f8ff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.modal-header p {
+  margin: 5px 0 0;
+
+  color: #748baa;
+  font-size: 12px;
+}
+
+.close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px;
+
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 9px;
+
+  color: #7890ae;
+  background: rgba(96, 165, 250, 0.05);
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.close-btn:hover {
+  border-color: rgba(248, 113, 113, 0.42);
+
+  color: #f87171;
+  background: rgba(220, 38, 38, 0.10);
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.teacher-modal form {
+  padding: 23px 25px 25px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  color: #aebfd7;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 43px;
+
+  box-sizing: border-box;
+  padding: 0 12px;
+
+  outline: none;
+
+  border: 1px solid rgba(96, 165, 250, 0.24);
+  border-radius: 9px;
+
+  color: #e5edfb;
+  background: #081c36;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.form-group input:hover,
+.form-group select:hover {
+  border-color: rgba(96, 165, 250, 0.44);
+}
+
+.form-group input::placeholder {
+  color: #536d8e;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: rgba(96, 165, 250, 0.72);
+
+  background: #0a2241;
+
+  box-shadow:
+    0 0 0 3px rgba(59, 130, 246, 0.08),
+    0 0 15px rgba(37, 99, 235, 0.05);
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-group select option {
+  color: #e5edfb;
+  background: #0b2342;
+}
+
+
+/* =====================================================
+   SAVE BUTTON
+===================================================== */
+
+.full-btn {
+  width: 100%;
+  margin-top: 22px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+  .teacher-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+@media (max-width: 760px) {
+  .teachers-page {
+    padding: 20px;
+  }
+
+  .page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .page-heading .primary-btn {
+    width: 100%;
+  }
+
+  .teacher-summary-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .table-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 520px) {
+  .teachers-page {
+    padding: 15px;
+  }
+
+  .page-heading h1 {
+    font-size: 26px;
+  }
+
+  .teacher-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: auto;
+  }
+
+  .modal-header {
+    padding: 20px;
+  }
+
+  .teacher-modal form {
+    padding: 20px;
+  }
+}
