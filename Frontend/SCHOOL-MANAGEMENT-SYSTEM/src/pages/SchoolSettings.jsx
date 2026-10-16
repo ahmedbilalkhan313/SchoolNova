@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styles/SchoolSettings.css";
 
-const SETTINGS_API = "http://localhost:5000/api/settings";
+const SETTINGS_API = "https://school-nova-pied.vercel.app/api/settings";
 
 function SchoolSettings() {
   const [schoolName, setSchoolName] = useState("");

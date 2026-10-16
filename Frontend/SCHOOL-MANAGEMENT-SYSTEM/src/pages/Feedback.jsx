@@ -9,7 +9,7 @@ import {
   X,
 } from "lucide-react";
 
-const FEEDBACK_API = "http://localhost:5000/api/feedback";
+const FEEDBACK_API = "https://school-nova-pied.vercel.app/api/feedback";
 
 function Feedback() {
   const [feedbacks, setFeedbacks] = useState([]);

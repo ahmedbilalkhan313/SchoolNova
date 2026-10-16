@@ -31,8 +31,8 @@ function Navbar() {
       try {
         const [studentsResponse, teachersResponse] =
           await Promise.all([
-            fetch("http://localhost:5000/api/students"),
-            fetch("http://localhost:5000/api/teachers"),
+            fetch("https://school-nova-pied.vercel.app/api/students"),
+            fetch("https://school-nova-pied.vercel.app/api/teachers"),
           ]);
 
         const studentsData = await studentsResponse.json();

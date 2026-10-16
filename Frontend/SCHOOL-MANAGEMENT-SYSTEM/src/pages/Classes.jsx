@@ -12,7 +12,7 @@ import {
   Edit2,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/classes";
+const API_URL = "https://school-nova-pied.vercel.app/api/classes";
 
 function Classes({ classes, setClasses }) {
   const [search, setSearch] = useState("");

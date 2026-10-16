@@ -2,8 +2,8 @@ import "../styles/Attendance.css";
 import { useEffect, useState } from "react";
 import { Search, Check, X } from "lucide-react";
 
-const STUDENTS_API = "http://localhost:5000/api/students";
-const ATTENDANCE_API = "http://localhost:5000/api/attendance";
+const STUDENTS_API = "https://school-nova-pied.vercel.app/api/students";
+const ATTENDANCE_API = "https://school-nova-pied.vercel.app/api/attendance";
 
 function Attendance({ attendance, setAttendance }) {
   const [search, setSearch] = useState("");

@@ -16,7 +16,7 @@ import {
   Edit2,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/teachers";
+const API_URL = "https://school-nova-pied.vercel.app/api/teachers";
 
 function Teachers({ teachers, setTeachers }) {
   const [search, setSearch] = useState("");

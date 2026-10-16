@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import "../styles/Students.css";
 
-const API_URL = "http://localhost:5000/api/students";
+const API_URL = "https://school-nova-pied.vercel.app/api/students";
 
 function StudentDetail() {
   const navigate = useNavigate();

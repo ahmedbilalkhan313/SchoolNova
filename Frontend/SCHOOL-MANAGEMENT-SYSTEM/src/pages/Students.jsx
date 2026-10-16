@@ -17,7 +17,7 @@ import {
   Edit2,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/students";
+const API_URL = "https://school-nova-pied.vercel.app/api/students";
 
 function Students({ students, setStudents }) {
   const navigate = useNavigate();

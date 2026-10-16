@@ -8,8 +8,8 @@ import {
   Edit2,
 } from "lucide-react";
 
-const STUDENTS_API = "http://localhost:5000/api/students";
-const FEES_API = "http://localhost:5000/api/fees";
+const STUDENTS_API = "https://school-nova-pied.vercel.app/api/students";
+const FEES_API = "https://school-nova-pied.vercel.app/api/fees";
 
 function Fees({ fees, setFees }) {
   const [search, setSearch] = useState("");
